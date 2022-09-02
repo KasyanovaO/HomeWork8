@@ -14,9 +14,15 @@ class Program
         {
             for (int j = 0; j < arr.GetLength(1); j++)
             {
-                Console.Write(arr[i, j] + " ");
+                if (arr[i, j] / 10 <= 0)
+                {
+                    Console.Write($"0{arr[i, j]} ");
+                }
+                else
+                {
+                    Console.Write($"{arr[i, j]} ");
+                }
             }
-
             Console.WriteLine();
         }
     }
@@ -39,7 +45,6 @@ class Program
                 --i;
             ++number;
         }
-
         PrintArray(array);
     }
 }
