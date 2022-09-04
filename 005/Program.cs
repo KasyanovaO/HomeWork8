@@ -36,14 +36,14 @@ class Program
         {
             array[i, j] = number;
             if (i <= j + 1 && i + j < 4 - 1)
-                ++j;
+                j++;
             else if (i < j && i + j >= 4 - 1)
-                ++i;
+                i++;
             else if (i >= j && i + j > 4 - 1)
-                --j;
+                j--;
             else
-                --i;
-            ++number;
+                i--;
+            number++;
         }
         PrintArray(array);
     }
